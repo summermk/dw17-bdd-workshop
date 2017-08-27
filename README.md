@@ -1,5 +1,5 @@
 # BDD for iOS 
-## Workshop for /dev/world 2017
+## /dev/world 2017 Workshop
 
 
 This is a starter project prepared for workshop Behaviour Driven Development for iOS for /dev/world 2017.
