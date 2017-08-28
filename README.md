@@ -9,14 +9,20 @@ This is a starter project prepared for workshop Behaviour Driven Development for
 ### Setup 
 $ gem install bundler
 
+```
 // Installing ruby 
 $ brew update
 $ brew install rbenv
 $ rbenv init
 $ rbenv install 2.4.1
 $ rbenv global 2.4.1
+```
 
-
+### Setting up new project
+```
+bundle exec calabash-ios download
+bundle exec calabash-ios gen
+```
 
 
 
