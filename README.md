@@ -5,6 +5,22 @@
 This is a starter project prepared for workshop Behaviour Driven Development for iOS for /dev/world 2017.
   
   
+
+### Setup 
+$ gem install bundler
+
+// Installing ruby 
+$ brew update
+$ brew install rbenv
+$ rbenv init
+$ rbenv install 2.4.1
+$ rbenv global 2.4.1
+
+
+
+
+
+  
 ### Links
 
 * Calabash iOS Wiki - [Explore Interactively](https://github.com/calabash/calabash-ios/wiki/Getting-Started#explore-interactively)
