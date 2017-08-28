@@ -13,6 +13,7 @@ $ gem install bundler
 $ bundle update
 ```
 > Having trouble with `gem` command? It is recommended to use managed ruby like `rbenv` rather than using the ruby that comes with macOS. To see instructions on setting up ruby see [Installing rbenv](#installing-rbenv-using-homebrew).
+> Getting `Gem::FilePermissionError`? See troubleshooting [below](#gem-file-permission-error).
 
 Once bundle is updated, open the project `bdd-workshop.xcodeproj` in Xcode.  
 Update the signing profile and run on a simulator.    
@@ -77,6 +78,31 @@ $ rbenv global 2.4.1
  Otherwise you can install rbenv using other methods - see [rbenv Installation](https://github.com/rbenv/rbenv#installation).
 
 
+#### Gem File Permission Error
+If you see the following message:
+```
+$ gem install bundler
+Fetching: bundler-1.15.4.gem (100%)
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory.
+```
+
+Check what gem you're using.
+```
+$ which gem
+/usr/bin/gem
+```
+
+If you see `/usr/bin/gem` it is not using rbenv.  
+Here are a few things you can try: 
+* Make sure you have run `rbenv global 2.4.1`
+* Restart terminal - sometimes path are not updated until terminal is restarted or new window opens.
+* If above didn't work, try adding the following in the `~/.bash_profile`. (see issue https://github.com/rbenv/rbenv/issues/879)
+  ```
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+  export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+  ```
 
 
 
