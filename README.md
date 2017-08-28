@@ -3,8 +3,9 @@
 
 
 This is a starter project prepared for workshop Behaviour Driven Development for iOS for /dev/world 2017.
-  
-  
+   
+**You can find the slides from the workshop [here](slides/workshop-slides.pdf)**
+
 
 ### Setup 
 Install bundler using gem.  
